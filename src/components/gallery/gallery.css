@@ -1,0 +1,19 @@
+.gallery > .row {
+  justify-content: space-between;
+}
+
+.galleryItem {
+  background-color: #f4f4f4;
+  margin: 2rem 0.5rem;
+  text-align: center;
+  max-width: 300px;
+}
+
+.galleryItemImage {
+  width: 100%;
+  height: auto;
+}
+
+.galleryItemTitle {
+  padding: 1rem;
+}

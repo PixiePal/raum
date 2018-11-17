@@ -1,0 +1,26 @@
+.logo {
+  height: 6vmin;
+}
+
+footer {
+  background-color: #000000;
+  padding: 3vmin;
+  text-align: left;
+  font-size: 1rem;
+  color: white;
+}
+
+.footerGrid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.oneColumn {
+  margin: auto 1rem;
+}
+
+footer .title {
+  font-family: Kalam, cursive;
+  font-size: calc(10px + 2vmin);
+}

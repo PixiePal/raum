@@ -1,11 +1,26 @@
 import React, { Component, Fragment } from 'react'
 
 import Header from './header/Header'
+import Gallery from '../gallery/Gallery'
+import Footer from './footer/Footer'
 
 import './home.css'
 
 import banner_image from './banner-room.jpg'
 import banner_image_small from './banner-room.jpg'
+
+const defaultItems = [
+  { name: 'Room 1',
+    imageUrl: 'gallery-items/room-1.jpg' },
+  { name: 'Room 2',
+    imageUrl: 'gallery-items/room-2.jpg' },
+  { name: 'Room 3',
+    imageUrl: 'gallery-items/room-1.jpg' },
+  { name: 'Room 4',
+    imageUrl: 'gallery-items/room-2.jpg' },
+  { name: 'Room 5',
+    imageUrl: 'gallery-items/room-2.jpg' }
+]
 
 class Home extends Component {
 
@@ -18,6 +33,8 @@ class Home extends Component {
             sizes='100vw'
             src={banner_image_small} alt='Meetingraum' />
         </section>
+        <Gallery items={defaultItems} />
+        <Footer />
       </Fragment>
     )
   }
