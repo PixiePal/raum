@@ -10,22 +10,21 @@ import banner_image from './banner-room.jpg'
 import banner_image_small from './banner-room.jpg'
 
 const defaultItems = [
-  { name: 'Room 1',
+  { name: 'ibis - Konstanz',
     imageUrl: 'gallery-items/Ibis-Konstanz-Reichenau.jpg',
     modelId: 'jGn4QWGgVVx' },
-  { name: 'Room 1',
+  { name: 'Mac Museum - Singen',
     imageUrl: 'gallery-items/Mac-Museum-Art-Cars-Restaurant.jpg',
     modelId: '9fAHDwhte4m' },
-  { name: 'Room 1',
+  { name: 'Mac Museum - Singen',
     imageUrl: 'gallery-items/Mac-Museum-Art-Cars-Tagungen.jpg',
     modelId: 'HRuACdjGkxb' },
-  { name: 'Room 1',
+  { name: 'ibis - Konstanz',
     imageUrl: 'gallery-items/Ibis-Konstanz-Mainau.jpg',
     modelId: 'MHyZLxJNGGR' },
-  { name: 'Room 1',
+  { name: 'ibis - Konstanz',
     imageUrl: 'gallery-items/Ibis-Konstanz-Lindau.jpg',
     modelId: '9fAHDwhte4m' }
-
 ]
 
 class Home extends Component {
