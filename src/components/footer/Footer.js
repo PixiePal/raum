@@ -11,6 +11,7 @@ class Footer extends Component {
         <div className='footerGrid container'>
           <div className='oneColumn'>
             <p className='title'>Über uns</p>
+            <p className='description'>Regionale Event-Locations für Ihre Veranstaltung in 3D. Finden Sie die passende Location für jeden Anlass! </p>
             <p>Lorem ipsum dolor</p>
           </div>
           <div className='oneColumn' />
