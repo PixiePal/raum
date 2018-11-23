@@ -1,14 +1,18 @@
 import React, { Component, Fragment } from 'react'
-import logo from './logo.svg'
+
+import { Link } from 'react-router-dom'
 
 import './header.css'
+import logo from './logo.svg'
 
 class Header extends Component {
 
   render () {
     return (
       <header className='header container'>
-        <img src={logo} className='logo' alt='logo' />
+        <Link to={{pathname: `/`}} >
+          <img src={logo} className='logo' alt='logo' />
+        </Link>
       </header>
     )
   }
