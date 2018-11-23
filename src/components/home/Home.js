@@ -40,7 +40,15 @@ class Home extends Component {
             sizes='100vw'
             src={banner_image_small} alt='Meetingraum' />
         </section>
+        <h2> Räumlichkeiten mit Licht- und Raumgefühl erleben in 3D</h2>
         <Gallery items={defaultItems} />
+
+        <h2>So funktioniert Event Ort</h2>
+        <h3>Sie planen eine Tagung oder Seminar und Sie suchen ein Event Location? </h3>
+        <p>In 3 Schritte zum richtigen Event Location</p>
+        <p>1. Region Auswählen</p>
+        <p>2. Kapazität eingeben</p>
+        <p>3. in 3D rumschauen und Location kontaktieren</p>
       </Fragment>
     )
   }

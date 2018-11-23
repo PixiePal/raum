@@ -12,8 +12,8 @@ class Header extends Component {
       <header className='header container'>
         <Link to={{pathname: `/`}} >
           <img src={logo} className='logo' alt='logo' />
-          <p className='description'>Event Locations: Tagungen und Seminare</p>
         </Link>
+        <h1 className='description'>Event Locations: Tagungen und Seminare</h1>
       </header>
     )
   }
