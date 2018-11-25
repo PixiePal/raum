@@ -47,13 +47,20 @@ class Home extends Component {
           </div>
           <Gallery items={defaultItems} />
         </section>
+        <section className='howitworks'>
+          <h1>Wie funktioniert es?</h1>
+          <h5>In 3 Schritte zum richtigen Event Location</h5>
 
-        <h2>So funktioniert Event Ort</h2>
-        <h3>Sie planen eine Tagung oder Seminar und Sie suchen ein Event Location? </h3>
-        <p>In 3 Schritte zum richtigen Event Location</p>
-        <p>1. Region Auswählen</p>
-        <p>2. Kapazität eingeben</p>
-        <p>3. in 3D rumschauen und Location kontaktieren</p>
+          <div className='how_details'>
+            <p>Sie planen eine Tagung, ein Seminar und suchen ein passendes Location für Ihr Event?</p>
+            <p>Mit Event-Ort geht es ganz leicht:</p>
+            <ol>
+              <li>Region Auswählen und Kapazität eingeben</li>
+              <li>Räumlichkeiten duch Virtuelle Touren besichtigen</li>
+              <li>Location kontaktieren</li>
+            </ol>
+          </div>
+        </section>
       </Fragment>
     )
   }
