@@ -40,8 +40,13 @@ class Home extends Component {
             sizes='100vw'
             src={banner_image_small} alt='Meetingraum' />
         </section>
-        <h2> Räumlichkeiten mit Licht- und Raumgefühl erleben in 3D</h2>
-        <Gallery items={defaultItems} />
+        <section className='showroom'>
+          <div className='desc'>
+            <h1><strong>Ausgewählte Event-Locations</strong></h1>
+            <h5>Räumlichkeiten in <strong>3D</strong> mit Licht- und Raumgefühl erleben.</h5>
+          </div>
+          <Gallery items={defaultItems} />
+        </section>
 
         <h2>So funktioniert Event Ort</h2>
         <h3>Sie planen eine Tagung oder Seminar und Sie suchen ein Event Location? </h3>
