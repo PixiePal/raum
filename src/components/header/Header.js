@@ -13,7 +13,6 @@ class Header extends Component {
         <Link to={{pathname: `/`}} >
           <img src={logo} className='logo' alt='logo' />
         </Link>
-        <h1 className='description'>Event Locations: Tagungen und Seminare</h1>
       </header>
     )
   }
