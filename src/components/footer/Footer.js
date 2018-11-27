@@ -10,7 +10,7 @@ class Footer extends Component {
       <footer>
         <div className='footerGrid container'>
           <div className='oneColumn'>
-            <p className='title'>Über uns</p>
+            <p className='title cursive'>Über uns</p>
             <p className='description'>Regionale Event-Locations für Ihre Veranstaltung in 3D. Finden Sie die passende Location für jeden Anlass! </p>
 
           </div>
