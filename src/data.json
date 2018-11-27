@@ -3,19 +3,21 @@
     "name": "ibis - Konstanz",
     "address": "Seestr. 23, Konstanz",
     "contact": {
-      "name" : "",
-      "email": ""
-    },
-    "website": "",
-    "tel": "",
-    "fax": "",
+      "name" : "Max Mustermann",
+      "email": "x@hello.de"},
+    "website": "www.ibis-konstanz.de",
+    "tel": "123123456",
+    "fax": "11221122222",
     "equipment_installed": ["Mikrofon", "Klimaanlage"],
     "equipment_optional": ["Projektion"],
     "area": "550qm",
-    "seating": {
-      "Konzert": "720",
-      "Seminar": "300-400",
-      "Bankett": "250"},
+    "seating": [
+      { "type": "Konzert",
+        "max": "720"},
+      { "type": "Seminar",
+          "max": "720"},
+      { "type": "Bankett",
+        "max": "250"}],
     "description": "Ein Raum, viele Möglichkeiten. Der Mehrzwecksaal bietet sich an für die vielfältigsten Veranstaltungen und Anforderungen: Vereinsversammlungen, Orchesterproben, Tanzkurse, Familien- und Betriebsfeste, Schulungen, Theatervorführungen, Klassenzusammenkünfte und vieles mehr.",
     "reviews": [
       { "stars": 3,
@@ -32,8 +34,8 @@
       "image_url": "gallery-items/Mac-Museum-Art-Cars-Restaurant.jpg",
       "modelId": "",
       "contact": {
-        "name" : "",
-        "email": ""}},
+        "name" : "Max Mustermann",
+        "email": "x@hello.de"}},
     { "id": 3,
       "name": "Mac Museum - Singen",
       "image_url": "gallery-items/Mac-Museum-Art-Cars-Tagungen.jpg",
