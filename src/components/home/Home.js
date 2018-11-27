@@ -5,29 +5,6 @@ import Banner from '../banner/Banner'
 
 import './home.css'
 
-const defaultItems = [
-  { id: 1,
-    name: 'ibis - Konstanz',
-    imageUrl: 'gallery-items/Ibis-Konstanz-Reichenau.jpg',
-    modelId: 'jGn4QWGgVVx' },
-  { id: 2,
-    name: 'Mac Museum - Singen',
-    imageUrl: 'gallery-items/Mac-Museum-Art-Cars-Restaurant.jpg',
-    modelId: '9fAHDwhte4m' },
-  { id: 3,
-    name: 'Mac Museum - Singen',
-    imageUrl: 'gallery-items/Mac-Museum-Art-Cars-Tagungen.jpg',
-    modelId: 'HRuACdjGkxb' },
-  { id: 4,
-    name: 'ibis - Konstanz',
-    imageUrl: 'gallery-items/Ibis-Konstanz-Mainau.jpg',
-    modelId: 'MHyZLxJNGGR' },
-  { id: 5,
-    name: 'ibis - Konstanz',
-    imageUrl: 'gallery-items/Ibis-Konstanz-Lindau.jpg',
-    modelId: '9fAHDwhte4m' }
-]
-
 class Home extends Component {
 
   render () {
@@ -39,7 +16,7 @@ class Home extends Component {
             <h1><strong>Ausgewählte Event-Locations</strong></h1>
             <h5>Räumlichkeiten in <strong>3D</strong> mit Licht- und Raumgefühl erleben.</h5>
           </div>
-          <Gallery items={defaultItems} />
+          <Gallery />
         </section>
         <section className='howitworks'>
           <h1>Wie funktioniert es?</h1>

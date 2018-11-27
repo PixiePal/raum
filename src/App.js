@@ -7,6 +7,8 @@ import Footer from './components/footer/Footer'
 
 import Room from './components/room/Room'
 
+import data from './data.json'
+
 import './App.css'
 
 class App extends Component {
@@ -16,7 +18,9 @@ class App extends Component {
         <div>
           <Header />
           <Route exact path='/' component={Home} />
-          <Route exact path='/room/:id' component={Room} />
+          <Route exact path='/room/:id'
+            render={(props) => <Room {...props} details={data} />}
+          />
           <Footer />
         </div>
       </Router>

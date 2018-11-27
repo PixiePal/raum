@@ -5,12 +5,11 @@ class Item extends Component {
 
   render () {
     return (
-      <Link className='galleryItem' key={this.props.item.id}
-
-        to={{pathname: `/room/${this.props.item.id}`}}
+      <Link className='galleryItem' key={this.props.roomDetails.id}
+        to={{pathname: `/room/${this.props.roomDetails.id}`}}
       >
-        <img src={this.props.item.imageUrl} className='galleryItemImage' alt='Raum' />
-        <p className='galleryItemTitle' >{this.props.item.name}</p>
+        <img src={this.props.roomDetails.image_url} className='galleryItemImage' alt='Raum' />
+        <p className='galleryItemTitle' >{this.props.roomDetails.name}</p>
         <p className='button'>DETAILS</p>
       </Link>
     )
