@@ -1,8 +1,8 @@
 import React, {Component, Fragment } from 'react'
 
-import './room.css'
+import './expose.css'
 
-class Room extends Component {
+class Expose extends Component {
 
   constructor (props) {
     super(props)
@@ -29,4 +29,4 @@ class Room extends Component {
   }
 }
 
-export default Room
+export default Expose

@@ -1,9 +1,7 @@
 [
   { "id": 1,
     "name": "ibis - Konstanz",
-    "address": "",
-    "image_url": ["gallery-items/Ibis-Konstanz-Reichenau.jpg"],
-    "model_id": "jGn4QWGgVVx&start=%7B%22camera_mode%22%3A1%2C%22camera_position%22%3A%7B%22x%22%3A7.889103889465332%2C%22y%22%3A1.1365827322006226%2C%22z%22%3A2.547135591506958%7D%2C%22camera_quaternion%22%3A%7B%22x%22%3A-0.0020390740267205616%2C%22y%22%3A0.6572086171695919%2C%22z%22%3A0.0017780153263281119%2C%22w%22%3A0.7537038638329021%7D%2C%22scan_id%22%3A%2259fceb21d6544464add31f43e3cfa02c%22%7D&play=1&brand=0&lang=de&title=0",
+    "address": "Seestr. 23, Konstanz",
     "contact": {
       "name" : "",
       "email": ""
@@ -18,7 +16,17 @@
       "Konzert": "720",
       "Seminar": "300-400",
       "Bankett": "250"},
-    "description": ""},
+    "description": "Ein Raum, viele Möglichkeiten. Der Mehrzwecksaal bietet sich an für die vielfältigsten Veranstaltungen und Anforderungen: Vereinsversammlungen, Orchesterproben, Tanzkurse, Familien- und Betriebsfeste, Schulungen, Theatervorführungen, Klassenzusammenkünfte und vieles mehr.",
+    "reviews": [
+      { "stars": 3,
+        "text": "Schön!",
+        "datum": "1.1.2018"},
+        { "stars": 5,
+          "text": "Sehr schön!",
+          "datum": "1.6.2018"}],
+    "image_url": "gallery-items/Ibis-Konstanz-Reichenau.jpg",
+    "model_id": "jGn4QWGgVVx&start=%7B%22camera_mode%22%3A1%2C%22camera_position%22%3A%7B%22x%22%3A7.889103889465332%2C%22y%22%3A1.1365827322006226%2C%22z%22%3A2.547135591506958%7D%2C%22camera_quaternion%22%3A%7B%22x%22%3A-0.0020390740267205616%2C%22y%22%3A0.6572086171695919%2C%22z%22%3A0.0017780153263281119%2C%22w%22%3A0.7537038638329021%7D%2C%22scan_id%22%3A%2259fceb21d6544464add31f43e3cfa02c%22%7D&play=1&brand=0&lang=de&title=0",
+    "map_code": "M59G+CR"},
     { "id": 2,
       "name": "Mac Museum - Singen",
       "image_url": "gallery-items/Mac-Museum-Art-Cars-Restaurant.jpg",

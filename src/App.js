@@ -5,7 +5,7 @@ import Home from './components/home/Home'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 
-import Room from './components/room/Room'
+import Expose from './components/expose/Expose'
 
 import data from './data.json'
 
@@ -19,7 +19,7 @@ class App extends Component {
           <Header />
           <Route exact path='/' component={Home} />
           <Route exact path='/room/:id'
-            render={(props) => <Room {...props} details={data} />}
+            render={(props) => <Expose {...props} details={data} />}
           />
           <Footer />
         </div>
