@@ -64,7 +64,29 @@ class RoomDetails extends Component {
   }
 }
 
-class Kontakt extends Component {
+class KontaktForm extends Component {
+  render () {
+    return (
+      <form>
+        <div className='row'>
+          <p className='col '>Name: </p>
+          <input className='col' />
+        </div>
+        <div className='row'>
+          <p className='col'>Nachricht: </p>
+          <textarea className='col' rows='5' cols='40' name='message' />
+        </div>
+
+        <div className='row'>
+          <p className='col' />
+          <button type='submit' className=' col btn btn-primary'>Absenden</button>
+        </div>
+      </form>
+    )
+  }
+}
+
+class KontaktSection extends Component {
   render () {
     let roomData = this.props.roomData
 
@@ -75,23 +97,10 @@ class Kontakt extends Component {
           <p>{roomData.contact.name}</p>
           <p>E-Mail: {roomData.contact.email}</p>
         </div>
-        <form className='col-sm'>
+        <div className='col-sm' >
           <h5><strong>Kontakt: </strong></h5>
-          <div className='row'>
-            <p className='col text-right'>Name: </p>
-            <input className='col' />
-          </div>
-          <div className='row'>
-            <p className='col text-right'>Nachricht: </p>
-            <textarea className='col' rows='5' cols='40' name='message' />
-          </div>
-
-          <div className='row'>
-            <p className='col' />
-            <button type='submit' className='btn btn-primary'>Absenden</button>
-          </div>
-
-        </form>
+          <KontaktForm />
+        </div>
       </div>
     )
   }
@@ -157,7 +166,7 @@ class Expose extends Component {
 
           <Reviews roomData={roomData} />
 
-          <Kontakt roomData={roomData} />
+          <KontaktSection roomData={roomData} />
 
           <div>
           Placeholder for google maps {roomData.map_code} + {roomData.address}
