@@ -43,12 +43,12 @@ class RoomDetails extends Component {
           <h5><strong>Ausstattung</strong></h5>
           <p className=''><strong>Installiert: </strong>
             {roomData.equipment_installed.map((item, index) => (
-              <span>{item} </span>))}
+              <span key={index}>{item} </span>))}
           </p>
 
           <p><strong>Auf Anfrage: </strong>
             {roomData.equipment_optional.map((item, index) => (
-              <span>{item} </span>))}
+              <span key={index}>{item} </span>))}
           </p>
         </div>
 
@@ -56,7 +56,7 @@ class RoomDetails extends Component {
           <h5><strong>Kapazität</strong></h5>
           <p><strong>Fläche: </strong>{roomData.area}</p>
           {roomData.seating.map((item, index) => (
-            <p>{item.type}: bis zu <strong>{item.max}</strong> Personen</p>
+            <p key={index}>{item.type}: bis zu <strong>{item.max}</strong> Personen</p>
         ))}
         </div>
       </div>
@@ -122,7 +122,7 @@ class Reviews extends Component {
         <h5><strong>Bewertungen:</strong></h5>
         <div className='row'>
           {this.props.roomData.reviews.map((item, index) => (
-            <p className='col-sm-6'><Stars pieces={item.stars} /> {item.text} ({item.datum}) </p>
+            <p className='col-sm-6' key={index}><Stars pieces={item.stars} /> {item.text} ({item.datum}) </p>
             ))}
         </div>
       </div>
