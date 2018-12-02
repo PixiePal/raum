@@ -1,6 +1,134 @@
-import React, {Component, Fragment } from 'react'
+import React, {Component } from 'react'
 
 import './expose.css'
+
+import star from './star.svg'
+
+class Stars extends Component {
+
+  render () {
+    let starList = []
+    for (let i = 0; i < this.props.pieces; i++) {
+      starList.push(<img key={i} className='star' src={star} alt='star' />)
+    }
+    return starList
+  }
+}
+
+class InfoCard extends Component {
+  render () {
+    return (
+      <div className='infoCard text-left'>
+        <h1 className='title'><strong>{this.props.roomData.name}</strong></h1>
+
+        <div>
+          <p>Tel: {this.props.roomData.tel}</p>
+          <p>Fax: {this.props.roomData.fax}</p>
+        </div>
+
+        <button type='button' className='btn btn-primary'>Buchen</button>
+
+      </div>
+    )
+  }
+}
+
+class RoomDetails extends Component {
+  render () {
+    let roomData = this.props.roomData
+
+    return (
+      <div className='sizeDetails row justify-content-sm-center'>
+        <div className='col-sm'>
+          <h5><strong>Ausstattung</strong></h5>
+          <p className=''><strong>Installiert: </strong>
+            {roomData.equipment_installed.map((item, index) => (
+              <span>{item} </span>))}
+          </p>
+
+          <p><strong>Auf Anfrage: </strong>
+            {roomData.equipment_optional.map((item, index) => (
+              <span>{item} </span>))}
+          </p>
+        </div>
+
+        <div className='col-sm'>
+          <h5><strong>Kapazität</strong></h5>
+          <p><strong>Fläche: </strong>{roomData.area}</p>
+          {roomData.seating.map((item, index) => (
+            <p>{item.type}: bis zu <strong>{item.max}</strong> Personen</p>
+        ))}
+        </div>
+      </div>
+    )
+  }
+}
+
+class Kontakt extends Component {
+  render () {
+    let roomData = this.props.roomData
+
+    return (
+      <div className='konstakt row justify-content-sm-center'>
+        <div className='col-sm' >
+          <h5><strong>Ihre Ansprechpartner: </strong></h5>
+          <p>{roomData.contact.name}</p>
+          <p>E-Mail: {roomData.contact.email}</p>
+        </div>
+        <form className='col-sm'>
+          <h5><strong>Kontakt: </strong></h5>
+          <div className='row'>
+            <p className='col text-right'>Name: </p>
+            <input className='col' />
+          </div>
+          <div className='row'>
+            <p className='col text-right'>Nachricht: </p>
+            <textarea className='col' rows='5' cols='40' name='message' />
+          </div>
+
+          <div className='row'>
+            <p className='col' />
+            <button type='submit' className='btn btn-primary'>Absenden</button>
+          </div>
+
+        </form>
+      </div>
+    )
+  }
+}
+
+class MainRow extends Component {
+  render () {
+    return (
+      <div className='firstRow row'>
+        <div className='col-sm-9'>
+          <iframe width='100%' height='480'
+            title={this.props.roomData.id}
+            src={this.props.model}
+            frameBorder='0' allowFullScreen allow='vr' />
+        </div>
+        <div className='col-sm'>
+          <InfoCard roomData={this.props.roomData} />
+        </div>
+      </div>
+    )
+  }
+}
+
+class Reviews extends Component {
+  render () {
+    return (
+      <div>
+        <h5><strong>Bewertungen:</strong></h5>
+        <div className='row'>
+          {this.props.roomData.reviews.map((item, index) => (
+            <p className='col-sm-6'><Stars pieces={item.stars} /> {item.text} ({item.datum}) </p>
+            ))}
+        </div>
+      </div>
+    )
+  }
+}
 
 class Expose extends Component {
 
@@ -17,63 +145,25 @@ class Expose extends Component {
     let website = 'https://' + roomData.website
 
     return (
-      <section className='container'>
-        <iframe width='100%' height='480'
-          title={roomData.id}
-          src={model}
-          frameBorder='0' allowFullScreen allow='vr' />
+      <section className='expose'>
 
-        <h1 className='title'>{roomData.name}</h1>
+        <MainRow roomData={roomData} model={model} />
 
-        <p>{roomData.description}</p>
+        <div className='container detailRows'>
 
-        <div className='row'>
-          <div className='oneColumn'>
-            <h5>Ausstattung</h5>
-            {roomData.equipment_installed.map((item, index) => (
-              <span>{item}</span>
-            ))}
-            <br />
-            <p>Auf Anfrage: </p>
-            {roomData.equipment_optional.map((item, index) => (
-              <span>{item}</span>
-            ))}
-          </div>
-          <div className='oneColumn'>
-            <h5>Kapazität</h5>
-            <p>Fläche: {roomData.area}</p>
-            {roomData.seating.map((item, index) => (
-              <p>{item.type}: bis zu <strong>{item.max}</strong> Personen</p>
-            ))}
-          </div>
-        </div>
+          <p>{roomData.description}</p>
 
-        <div>
-          <h3>Bewertungen:</h3>
-          {roomData.reviews.map((item, index) => (
-            <p><strong>{item.stars}</strong> {item.text} ({item.datum}) </p>
-          ))}
-        </div>
+          <RoomDetails roomData={roomData} />
 
-        <div>
-          <h3>Ihre Ansprechpartner: </h3>
-          <p>{roomData.contact.name}</p>
-          <p>{roomData.contact.email}</p>
-          <p>{roomData.tel}</p>
-          <p>{roomData.fax}</p>
-          <form>
-            <p>Name: <input /></p>
-            <p>Nachricht: <input /></p>
-            <button type='submit' >Absenden</button>
-          </form>
-        </div>
+          <Reviews roomData={roomData} />
 
-        <div>
+          <Kontakt roomData={roomData} />
+
+          <div>
           Placeholder for google maps {roomData.map_code} + {roomData.address}
-        </div>
+          </div>
 
-        <div>
-          Web: <a href={website}>{roomData.website}</a>
+          <div>Web: <a href={website}>{roomData.website}</a></div>
         </div>
       </section>
 

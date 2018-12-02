@@ -1,1 +1,33 @@
+.expose {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
 
+.firstRow {
+  margin: 3rem;
+}
+
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 3rem 1rem;
+}
+
+
+.detailRows>div {
+  margin-top: 5rem;
+}
+
+h5 {
+  margin-bottom: 1.5rem;
+}
+.star {
+  height: 1em;
+}
+
+.konstakt div {
+  margin-top: 1rem;
+}

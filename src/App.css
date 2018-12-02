@@ -5,3 +5,7 @@ body {
 .cursive {
   font-family: 'Pacifico', cursive;
 }
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #3C0050;
+}
