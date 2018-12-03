@@ -110,13 +110,13 @@ class MainRow extends Component {
   render () {
     return (
       <div className='firstRow row'>
-        <div className='col-sm-9'>
+        <div className='col-lg-9'>
           <iframe width='100%' height='480'
             title={this.props.roomData.id}
             src={this.props.model}
             frameBorder='0' allowFullScreen allow='vr' />
         </div>
-        <div className='col-sm'>
+        <div className='col-lg-3'>
           <InfoCard roomData={this.props.roomData} />
         </div>
       </div>
