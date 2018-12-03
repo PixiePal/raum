@@ -114,7 +114,7 @@ class MainRow extends Component {
           <iframe width='100%' height='480'
             title={this.props.roomData.id}
             src={this.props.model}
-            frameBorder='0' allowFullScreen allow='vr' />
+            frameBorder='0' allowFullScreen allow='vr' autoFocus />
         </div>
         <div className='col-lg-3'>
           <InfoCard roomData={this.props.roomData} />
